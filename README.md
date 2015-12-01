@@ -1,5 +1,5 @@
 # br-1200convert
-Conversion script for the BR-1200's VR8 files
+Conversion script for the BR-1200's VR8 files, converts raw VR8 to WAV.
 
 I didn't like importing raw files into audacity, so I made this script using
 SOX. I only tested it on linux mint 17 for Boss BR-1200 files
