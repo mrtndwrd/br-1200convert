@@ -14,7 +14,8 @@ for f in $directory/*.VR8; do
 	echo $f
 	# Make output file name
 	o="${f%.VR8}.wav"
-	# Make directory for this track (works for BR-1200)
+	# Make directory for this track (works for BR-1600)
+	# TODO: Maybe 5 ?'s
 	newdir="${o%??????}"
 	# Convert file
 	# -t file type: raw
