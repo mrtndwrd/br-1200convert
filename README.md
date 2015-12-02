@@ -13,6 +13,11 @@ It will output which filename it is converting. Then the output .wav file will
 be moved to a subdirectory for the recording it was for (my recordings always
 had the same first 6 characters and then 2 differing for each audio track)
 
+You need to have sox installed, on ubuntu based systems (if you don't already
+have it) type:
+
+sudo apt-get install sox
+
 After it's done, you can run audacity and do file -> import -> audio, select
 the files in 1 directory, and all your files will be imported in only three
 clicks!
