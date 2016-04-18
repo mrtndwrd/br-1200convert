@@ -9,7 +9,9 @@ fi
 directory="$1"
 
 # Loop through VR8 files
-for f in $directory/*.VR8; do
+#for f in $directory/*.VR8; do
+find "$directory" -name '*.VR8' -print0 | while read -d $'\0' f
+do
 	# Show progress
 	echo $f
 	# Make output file name
@@ -23,8 +25,8 @@ for f in $directory/*.VR8; do
 	# -c number of channels: 1 (per file)
 	# -e encoding: signed integer
 	# -r sample rate: 44100Khz
-	sox -t raw -b 16 -c 1 -e signed-integer -r 44100 $f $o
+	sox -t raw -b 16 -c 1 -e signed-integer -r 44100 "$f" "$o"
 	# Move to a directory made from the first 6 characters:
-	mkdir -p $newdir
-	mv $o $newdir
+	mkdir -p "$newdir"
+	mv "$o" "$newdir"
 done
